@@ -14,7 +14,7 @@ const app = express();
 /*
 * Config
 */
-const requiredEnvVars = ['VERIFY_TOKEN', 'APP_SECRET'];
+const requiredEnvVars = ['VERIFY_TOKEN'];
 requiredEnvVars.forEach(envVar => {
   if (!process.env[envVar]) {
     throw new Error(`Missing required environment variable: ${envVar}`);
@@ -23,7 +23,6 @@ requiredEnvVars.forEach(envVar => {
 const config = {
   port: parseInt(process.env.PORT) || 3000,
   verifyToken: process.env.VERIFY_TOKEN,
-  appSecret: process.env.APP_SECRET,
 };
 
 /*
