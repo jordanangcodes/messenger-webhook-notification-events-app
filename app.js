@@ -1,5 +1,5 @@
 /*
-* Title: Example Messenger App
+* Title: Example Messenger Webhook Notification App
 
 * Desciption: This is an example application that demonstrates how to handle Webhook notification events. Webhook
 *   notification events are triggered when a Business's Facebook page or Instagram page receives a message. This application
@@ -56,7 +56,7 @@ app.get("/messaging-webhook", (req, res) => {
       console.log("Messaging webhook has been verified.");
       res.status(200).send(challenge);
     } else {
-      console.log("Failed to verify messing webhook");
+      console.log("Failed to verify messaging webhook");
       res.sendStatus(403);
     }
   }
